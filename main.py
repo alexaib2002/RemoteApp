@@ -5,18 +5,19 @@ from os import system
 dependencies: list = ['xfreerdp']
 py_dependencies: list = ['PySide2']
 
+
+def isInstalled(self, bin) -> bool:
+    from shutil import which
+    return which(bin) is not None
+
+def startConnection(self, user: str, app: str, machine: str, password: str) -> None:
+    import os
+    system('xfreerdp /u:%s /p:%s /app:"%s" /v:%s' % (user, password, app, machine))
+    return
+
+
 for item in py_dependencies:
     system('pip install %s' % (item))
-
-class main():
-    def isInstalled(self, bin) -> bool:
-        from shutil import which
-        return which(bin) is not None
-
-    def startConnection(self, user: str, app: str, machine: str, password: str) -> None:
-        import os
-        system('xfreerdp /u:%s /p:%s /app:"%s" /v:%s' % (user, password, app, machine))
-        return
 
 
 if __name__ == "__main__":  # init
