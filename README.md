@@ -1,13 +1,15 @@
 # RemoteApp
-A Python-based application for executing remote apps on your computer
+A Python-based application for executing remote apps on your Linux system
 
 ## Usage
 At the moment, RemoteApp is only distributed as a Python script.
 
 
-´git clone https://github.com/alexaib2002/RemoteApp.git´
-´cd RemoteApp´
-´python3 main.py´
+`git clone https://github.com/alexaib2002/RemoteApp.git`
+
+`cd RemoteApp`
+
+`python3 main.py`
 
 This will open a new window, where you will introduce the remote username, the password, the application you want to 
 execute (ex: explorer.exe), and the IP address of the machine.
